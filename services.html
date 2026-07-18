@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Check out the list of items, skills, and basic web building services I offer.">
+    <title>My First Website - Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Personal Website</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Things I Can Do</h2>
+        <p>Here is a list of services and skills I am practicing right now:</p>
+
+        <div id="promo-box" class="alert-box">
+            <strong>Special Offer!</strong> Get 10% off your first basic web project this week!
+        </div>
+
+        <button id="toggle-btn">Show Special Offer</button>
+        <br><br>
+
+        <section class="service-box">
+            <h3>HTML Setup</h3>
+            <p>I can create standard text pages, use headings, add links, and structure documents using normal HTML tags.</p>
+        </section>
+
+        <section class="service-box">
+            <h3>Basic CSS Styling</h3>
+            <p>I can change text colors, change fonts, adjust margins, and add background colors to different areas of the screen.</p>
+        </section>
+
+        <section class="service-box">
+            <h3>Data Management</h3>
+            <p>I can help organize spreadsheet files, clean up lists, and arrange records so they are easy to read.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2026 - My Simple Website</p>
+    </footer>
+
+    <script>
+        var btn = document.getElementById('toggle-btn');
+        var box = document.getElementById('promo-box');
+
+        btn.onclick = function() {
+            if (box.style.display === 'none' || box.style.display === '') {
+                box.style.display = 'block';
+                btn.innerText = 'Hide Special Offer';
+            } else {
+                box.style.display = 'none';
+                btn.innerText = 'Show Special Offer';
+            }
+        };
+    </script>
+
+</body>
+</html>
