@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the home page of my very first simple website built with HTML and CSS.">
+    <title>My First Website - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Personal Website</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <h2 id="greeting">Welcome to My Website!</h2>
+            <p>Today's date and time is: <span id="datetime"></span></p>
+        </section>
+
+        <section class="container">
+            <h3>About This Site</h3>
+            <p>I am learning how to build web pages. This site has three pages in total: the Home page, a Services page to show what I can do, and a Contact page with a form.</p>
+            <p>Feel free to click the links in the navigation bar above to look around!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2026 - My Simple Website</p>
+    </footer>
+
+    <script>
+        function updateDateTime() {
+            var now = new Date();
+            document.getElementById('datetime').innerText = now.toLocaleString();
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+
+        var currentHour = new Date().getHours();
+        var greetingText = "Welcome to My Website!";
+        if (currentHour < 12) {
+            greetingText = "Good Morning! Welcome to My Website!";
+        } else if (currentHour < 18) {
+            greetingText = "Good Afternoon! Welcome to My Website!";
+        } else {
+            greetingText = "Good Evening! Welcome to My Website!";
+        }
+        document.getElementById('greeting').innerText = greetingText;
+    </script>
+
+</body>
+</html>
